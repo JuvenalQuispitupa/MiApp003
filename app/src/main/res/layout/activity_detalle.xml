@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.juvenalquispitupa.miapp003.Detalle">
+
+    <LinearLayout android:id="@+id/llBarraBotones" android:layout_height="wrap_content" android:layout_width="wrap_content"
+        >
+        <Button android:id="@+id/btnCrear" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Crear"/>
+        <Button android:id="@+id/btnModificar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Modificar"/>
+        <Button android:id="@+id/btnEliminar" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Eliminar"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/llDetalle" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_below="@+id/llBarraBotones" android:orientation="vertical">
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:weightSum="1">
+           <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="ID"></TextView>
+           <EditText android:layout_height="wrap_content" android:layout_width="wrap_content"
+               android:id="@+id/etID" android:hint="Identificador"/>
+           <ImageView android:id="@+id/ivFoto" android:layout_height="56dp" android:layout_width="73dp" android:src="@drawable/foto"
+               android:layout_weight="0.09" />
+       </LinearLayout>
+
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Nombres: "/>
+        <EditText android:id="@+id/etNombre" android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:hint="Nombres del alumno"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Apellido Paterno: "/>
+        <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:hint="Apellido Paterno"
+            android:id="@+id/etApellidoP"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Apellido Materno: "/>
+        <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:hint="Apellido Materno"
+            android:id="@+id/etApellidoM"/>
+
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Email: "/>
+        <EditText android:id="@+id/etEmail" android:layout_height="wrap_content" android:layout_width="match_parent" android:hint="Correo electronico"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Nota: "/>
+        <EditText android:id="@+id/etNota" android:layout_height="wrap_content" android:layout_width="wrap_content" android:hint="Nota final"/>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Foto" android:hint="Foto en formato png"/>
+        <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:hint="la ruta de la foto"
+            android:id="@+id/etFotoRuta"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
